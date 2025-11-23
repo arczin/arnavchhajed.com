@@ -1,0 +1,56 @@
+/* Reading List Styles */
+.clickable-text {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.clickable-text:hover {
+    color: var(--accent);
+}
+
+.reading-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.reading-subheader {
+    font-family: var(--font-heading);
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.reading-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.reading-list li {
+    font-family: var(--font-mono);
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.reading-list li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+    .reading-grid {
+        grid-template-columns: 1fr;
+    }
+}

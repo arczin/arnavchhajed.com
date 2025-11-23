@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnav Chhajed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="mini-btn.css">
+    <link rel="stylesheet" href="drawing.css">
+    <link rel="stylesheet" href="tooltip.css">
+    <link rel="stylesheet" href="reading.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Pixelify+Sans:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Pixelify+Sans:wght@400..700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+    <button id="disable-follow-btn" class="disabled">CLICK HERE FOR SOMETHING COOL!</button>
+
+    <div class="datapad-container">
+        <!-- Top System Bar -->
+
+
+        <!-- Main Content Area -->
+        <main class="content-scroll">
+
+            <!-- Header / Identity -->
+            <header class="hero-header">
+                <h1 class="hero-name">ARCZ</h1>
+                <h2 class="hero-tagline">(Arnav Chhajed)</h2>
+            </header>
+
+            <!-- About Section -->
+            <section class="section">
+                <div class="section-content">
+                    <p>Helo, I am Arnav - an AI & Math <span class="tooltip-trigger">romantic<span
+                                class="tooltip-content">it's like more intense than passionate :)</span></span> </p>
+                    <p> I'm currently
+                        exploring
+                        AI
+                        (trying to
+                        build LLM from
+                        scratch), and researching how to improve its <span class="tooltip-trigger">creativity<span
+                                class="tooltip-content">more specifically combinatorial creativity; which implies that
+                                novel ideas are unfamiliar combination of familiar ideas</span></span>
+                        - while also studying advanced Mathematics and Physics for Olympiads, JEE Advanced and ML;
+                        also
+                        because
+                        it's kinda fun.
+                    </p>
+                    <p>I believe connections are extremely beautiful - unexpected ones, even more so.</p>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="section">
+                <div class="section-label">CURRENT PROJECTS</div>
+                <div class="grid-container">
+                    <div class="card" data-id="llm-scratch">
+                        <div class="card-header">LLM FROM SCRATCH</div>
+                        <div class="card-body">Exploring transformer architectures, optimization techniques, and
+                            training methodologies - using stanford CS336 course</div>
+                    </div>
+                    <div class="card" data-id="research">
+                        <div class="card-header">RESEARCH</div>
+                        <div class="card-body">Researching algorithms to enhance creativity in LLMs
+                            (combinatorial). Also using phase 1 algorithm to create a general purpose creative wrapper.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation Links (Past Projects & Achievements) -->
+            <section class="section">
+                <div class="section-label">SO FAR</div>
+
+                <div class="grid-container">
+                    <div class="card" id="past-projects-btn">
+                        <div class="card-header" style="margin-bottom: 0; text-align: center;">OTHER PROJECTS &
+                            INTERNSHIPS</div>
+                    </div>
+                    <div class="card" id="achievements-btn">
+                        <div class="card-header" style="margin-bottom: 0; text-align: center;">ACHIEVEMENTS</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interests Section -->
+            <section class="section">
+                <div class="section-label">BEYOND THE GRIND</div>
+                <div class="section-content">
+                    <p><span class="clickable-text" id="reading-btn">Reading.</span> <span
+                            class="tooltip-trigger">Writing. <span class="tooltip-content">a page coming really
+                                soon</span></span> <span class="tooltip-trigger">Meditating. <span
+                                class="tooltip-content">jhana
+                                and vipassana</span></span><span> </spans><span class="tooltip-trigger">
+                                Exercising.<span class="tooltip-content">calisthenics and gym</span></span>
+                            <p>
+                            <p class="instruction"> I also love cooking, it's really satisfying!</p>
+                            <div class="potato-container">
+                                <img id="knife" src="sprites/knife.png" alt="Knife" draggable="false">
+                                <div id="potato-wrapper">
+                                    <img id="potato" src="sprites/potato.png" alt="Potato" draggable="false">
+                                </div>
+                            </div>
+                            <p class="instruction"> Favourite track</p>
+
+                            <div>
+                                <iframe data-testid="embed-iframe" style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/track/4VnDmjYCZkyeqeb0NIKqdA?utm_source=generator"
+                                    width="100%" height="176" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+
+                            <p class="instruction">also a bit obsessed with arts and aesthetics. My favourite piece i
+                                guess
+                                ↓
+                                (try it!)</p>
+                            <div class="drawing-container">
+                                <div class="drawing-ref" id="drawing-ref-container">
+                                    <img src="eye.jpg" alt="Eye Reference">
+                                    <div class="blur-overlay">
+                                        <button class="reveal-btn">REVEAL</button>
+                                    </div>
+                                </div>
+                                <div class="drawing-area">
+                                    <div class="tools">
+                                        <button id="tool-pencil" class="tool-btn active">Pencil</button>
+                                        <button id="tool-eraser" class="tool-btn">Eraser</button>
+                                        <input type="range" id="tool-size" min="1" max="20" value="2"
+                                            class="tool-slider" title="Brush Size">
+                                        <button id="tool-clear" class="tool-btn">Clear</button>
+                                    </div>
+                                    <canvas id="sketch-canvas" width="300" height="200"></canvas>
+                                </div>
+                            </div>
+
+            </section>
+
+            <!-- Connect Section -->
+            <section class="section connect-section">
+                <div class="section-label">CONNECT</div>
+                <div class="connect-links">
+                    <a href="mailto:arnav.chhajed.000@gmail.com" class="connect-link" target="_blank"
+                        rel="noopener noreferrer">Email (active)</a>
+                    <a href="https://www.linkedin.com/in/arcz" class="connect-link" target="_blank"
+                        rel="noopener noreferrer">LinkedIn (active)</a>
+                </div>
+                <div class="copyright">© 2025 Arnav Chhajed</div>
+            </section>
+
+            <!-- Spacer for scrolling -->
+            <div style="height: 100px;"></div>
+        </main>
+
+        <!-- Character (Moved from bottom bar) -->
+        <div id="character"></div>
+
+        <!-- Project Detail Modal -->
+        <div id="project-modal" class="modal-overlay">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <div class="modal-image-placeholder">PROJECT IMAGE</div>
+                <h2 id="modal-title">PROJECT TITLE</h2>
+                <p id="modal-desc">Project description goes here.</p>
+            </div>
+        </div>
+
+        <!-- Past Projects List Modal -->
+        <div id="past-projects-modal" class="modal-overlay">
+            <div class="modal-content wide-modal">
+                <button class="close-modal">&times;</button>
+                <h2 class="modal-header">OTHER PROJECTS & INTERNSHIPS</h2>
+                <div class="grid-container">
+                    <div class="card" data-id="founder">
+                        <div class="card-header">Founder & Executive Director @ Student Hackpad</div>
+                    </div>
+                    <div class="card" data-id="portfolio-v1">
+                        <div class="card-header">Parkinsons detector</div>
+                    </div>
+                    <div class="card" data-id="chess-bot">
+                        <div class="card-header">Astrophysical transient detector</div>
+                    </div>
+                    <div class="card" data-id="weather-app">
+                        <div class="card-header">FarmFriend</div>
+                    </div>
+                    <div class="card" data-id="internship">
+                        <div class="card-header">AI Intern @ Pigeepost</div>
+                    </div>
+                    <div class="card" data-id="writing">
+                        <div class="card-header">Writing + Other ML models</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reading List Modal -->
+        <div id="reading-modal" class="modal-overlay">
+            <div class="modal-content wide-modal">
+                <button class="close-modal">&times;</button>
+                <h2 class="modal-header">MY READING LIST</h2>
+                <div class="reading-grid">
+                    <div class="reading-column">
+                        <h3 class="reading-subheader">READ</h3>
+                        <ul class="reading-list">
+                            <li>Bhagavad Gita</li>
+                            <li>Psycho-Cybernetics</li>
+                            <li>Poor Charlie's Almanack</li>
+                            <li>The Almanack of Naval Ravikant</li>
+                            <li>The Beginning of Infinity</li>
+                            <li>How to Win Friends and Influence People</li>
+                            <li>Atomic Habits</li>
+                            <li>Meditations</li>
+                        </ul>
+                    </div>
+                    <div class="reading-column">
+                        <h3 class="reading-subheader">TO BE READ</h3>
+                        <ul class="reading-list">
+                            <li>The Creative Act: A Way of Being</li>
+                            <li>Paradigms of Artificial Intelligence Programming</li>
+                            <li>Why Greatness Cannot Be Planned</li>
+                            <li>Sapiens: A Brief History of Humankind</li>
+                            <li>Elon Musk by Walter Isaacson</li>
+                            <li>Think and Grow Rich</li>
+                            <li>The Psychology of Money</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements Modal -->
+        <div id="achievements-modal" class="modal-overlay">
+            <div class="modal-content wide-modal">
+                <button class="close-modal">&times;</button>
+                <h2 class="modal-header">ACHIEVEMENTS</h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <div class="card-header">ACADEMICS</div>
+                        <div class="card-body">Rank 1 for 4 consecutive years (Grades 9-12) with ~99% average. Ranked
+                            7th
+                            internationally in Grade X (98.6% among 2.25M students).</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">SCORES</div>
+                        <div class="card-body">SAT: 1540 (First Attempt).<br>APs: 5 in Calculus BC, Chemistry, Physics
+                            C:
+                            Mechanics (all self-studied).</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">COMPETITIONS</div>
+                        <div class="card-body">14 Gold Medals & top 500 international ranks in Math/Science Olympiads
+                            (2014-22). 2x National Top 100 in Aryabhatta Math Challenge.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">PROBLEM SOLVING</div>
+                        <div class="card-body">Top 1% globally on Brilliant.org (>10M learners). 90th percentile in
+                            Mathacademy within 2 months.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

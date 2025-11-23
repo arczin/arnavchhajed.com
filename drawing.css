@@ -1,0 +1,149 @@
+/* Drawing Container */
+.drawing-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    /* height: 250px; Removed fixed height to prevent overflow */
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    align-items: flex-end;
+    /* Align children to bottom so image aligns with canvas */
+}
+
+.drawing-ref {
+    flex: 1;
+    height: 200px;
+    /* Match canvas height explicitly */
+    overflow: hidden;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    position: relative;
+    /* For overlay positioning */
+}
+
+.drawing-ref img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(10px);
+    /* Initial blur */
+    transition: filter 0.5s ease;
+}
+
+.drawing-ref.revealed img {
+    filter: blur(0);
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.drawing-ref.revealed .blur-overlay {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.reveal-btn {
+    background: var(--panel-bg);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.reveal-btn:hover {
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+.drawing-area {
+    flex: 1.5;
+    /* height: 100%; Removed to let it grow with content */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tools {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.tool-slider {
+    width: 60px;
+    height: 4px;
+    appearance: none;
+    /* Standard property */
+    -webkit-appearance: none;
+    background: var(--border);
+    outline: none;
+    border-radius: 2px;
+}
+
+.tool-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    /* Standard property */
+    width: 12px;
+    height: 12px;
+    background: var(--text-dim);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.tool-slider::-webkit-slider-thumb:hover {
+    background: var(--accent);
+}
+
+.tool-btn {
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tool-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.tool-btn.active {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+}
+
+#sketch-canvas {
+    background: #fff;
+    width: 100%;
+    height: 200px;
+    /* Fixed height to match reference image */
+    cursor: crosshair;
+    border: 1px solid var(--border);
+}

@@ -1,0 +1,26 @@
+/* Mini Button Style */
+.mini-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-family: var(--font-heading);
+    font-size: 0.6rem;
+    padding: 0.3rem 0.6rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.mini-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 5px rgba(0, 255, 65, 0.2);
+}
+
+.mini-btn.disabled {
+    border-color: #555;
+    color: #555;
+}
