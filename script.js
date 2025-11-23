@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'research': {
             title: 'CREATIVITY RESEARCH',
-            desc: 'Investigating combinatorial algorithms to enhance creativity in LLMs. This research focuses on moving beyond next-token prediction to generate novel and useful ideas. Currently developing a "Phase 1" algorithm that acts as a general-purpose creative wrapper for existing models.'
+            desc: "This research enhances LLM creativity through a combinatorial framework that abstracts problems into generalized principles to identify functional solutions in unrelated domains. By rigorously balancing novelty (semantic distance) and utility (constraint satisfaction), the system addresses the 'ideation-execution gap', producing scientific solutions that are both original and practically viable."
         },
         'parkinsons-detector': {
             title: 'Parkinsons Detector',
