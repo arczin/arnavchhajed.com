@@ -400,14 +400,6 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 
-a,
-button,
-.connect-link,
-.potato-container,
-#disable-follow-btn {
-    cursor: url('c/link.png'), pointer !important;
-}
-
 #disable-follow-btn {
     position: fixed;
     top: 50px;
