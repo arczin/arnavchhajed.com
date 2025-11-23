@@ -14,7 +14,6 @@
 .drawing-ref {
     flex: 1;
     height: 200px;
-    /* Match canvas height explicitly */
     overflow: hidden;
     border: 1px solid var(--border);
     display: flex;
@@ -22,7 +21,6 @@
     align-items: center;
     background: #000;
     position: relative;
-    /* For overlay positioning */
 }
 
 .drawing-ref img {
@@ -30,7 +28,6 @@
     height: 100%;
     object-fit: cover;
     filter: blur(10px);
-    /* Initial blur */
     transition: filter 0.5s ease;
 }
 
@@ -78,7 +75,6 @@
 
 .drawing-area {
     flex: 1.5;
-    /* height: 100%; Removed to let it grow with content */
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -94,7 +90,6 @@
     width: 60px;
     height: 4px;
     appearance: none;
-    /* Standard property */
     -webkit-appearance: none;
     background: var(--border);
     outline: none;
@@ -104,7 +99,6 @@
 .tool-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    /* Standard property */
     width: 12px;
     height: 12px;
     background: var(--text-dim);

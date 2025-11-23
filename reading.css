@@ -1,26 +1,31 @@
-/* Reading List Styles */
 .clickable-text {
+    cursor: pointer;
     text-decoration: underline;
     text-decoration-color: var(--accent);
-    cursor: pointer;
-    transition: color 0.2s;
+    text-underline-offset: 4px;
+    transition: all 0.2s;
 }
 
 .clickable-text:hover {
     color: var(--accent);
+    text-shadow: 0 0 5px var(--accent);
 }
 
 .reading-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin-top: 1rem;
+}
+
+.reading-column {
+    display: flex;
+    flex-direction: column;
 }
 
 .reading-subheader {
     font-family: var(--font-heading);
-    color: var(--accent);
-    font-size: 1.2rem;
+    color: var(--text-dim);
+    font-size: 1rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.5rem;
@@ -33,20 +38,27 @@
 }
 
 .reading-list li {
-    font-family: var(--font-mono);
-    color: var(--text-dim);
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    position: relative;
+    margin-bottom: 0.8rem;
     padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.4;
 }
 
 .reading-list li::before {
     content: ">";
     position: absolute;
     left: 0;
-    color: var(--accent);
+    color: var(--accent-dim);
+    font-family: var(--font-heading);
     font-size: 0.8rem;
+}
+
+.reading-list li:hover {
+    color: var(--accent);
+}
+
+.reading-list li:hover::before {
+    color: var(--accent);
 }
 
 @media (max-width: 600px) {
