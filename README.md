@@ -1,4 +1,4 @@
-# HELO 📟
+# Helo 📟
 
 Welcome to my personal website. It's a mix of retro aesthetics, pixel art, and my current obsession with AI & Math.
 
