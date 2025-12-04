@@ -7,7 +7,6 @@
 }
 
 .tooltip-content {
-    visibility: hidden;
     width: 200px;
     background-color: #000;
     color: var(--text-main);
@@ -27,6 +26,10 @@
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
 }
 
+.tooltip-content.visible {
+    opacity: 1;
+}
+
 .tooltip-content::after {
     content: "";
     position: absolute;
@@ -36,9 +39,4 @@
     border-width: 5px;
     border-style: solid;
     border-color: var(--accent) transparent transparent transparent;
-}
-
-.tooltip-trigger:hover .tooltip-content {
-    visibility: visible;
-    opacity: 1;
 }

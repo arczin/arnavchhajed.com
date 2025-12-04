@@ -449,4 +449,51 @@ document.addEventListener('DOMContentLoaded', () => {
             drawingRefContainer.classList.add('revealed');
         });
     }
+
+    // Tooltip Logic
+    const tooltipTriggers = document.querySelectorAll('.tooltip-trigger');
+
+    tooltipTriggers.forEach(trigger => {
+        trigger.addEventListener('mouseenter', () => {
+            const text = trigger.getAttribute('data-tooltip');
+            if (!text) return;
+
+            // Check if tooltip already exists
+            let tooltip = trigger.querySelector('.tooltip-content');
+            if (tooltip) {
+                // If it exists and is being removed, cancel removal
+                if (tooltip.removeTimeout) {
+                    clearTimeout(tooltip.removeTimeout);
+                    tooltip.removeTimeout = null;
+                }
+                tooltip.classList.add('visible');
+                return;
+            }
+
+            tooltip = document.createElement('span');
+            tooltip.className = 'tooltip-content';
+            tooltip.textContent = text;
+
+            trigger.appendChild(tooltip);
+
+            // Trigger reflow to ensure transition plays
+            void tooltip.offsetWidth;
+
+            tooltip.classList.add('visible');
+        });
+
+        trigger.addEventListener('mouseleave', () => {
+            const tooltip = trigger.querySelector('.tooltip-content');
+            if (tooltip) {
+                tooltip.classList.remove('visible');
+
+                // Wait for transition to finish before removing
+                tooltip.removeTimeout = setTimeout(() => {
+                    if (trigger.contains(tooltip)) {
+                        trigger.removeChild(tooltip);
+                    }
+                }, 300); // Matches CSS transition time
+            }
+        });
+    });
 });
